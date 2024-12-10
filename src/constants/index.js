@@ -15,10 +15,9 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
-    tesla,
-    shopify,
+   apple,
+   merieux,
+   oreka,
     carrent,
     jobit,
     tripguide,
@@ -118,57 +117,46 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "March 2020 - April 2021",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "React Native Developer",
-      company_name: "Tesla",
-      icon: tesla,
+      title: "Apple Repair Technician",
+      company_name: "Iraxkorr S.L.",
+      icon: apple,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      iconBorder: "#535353",
+      date: "August 2016 - August 2018",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Apple-certified technician for iOS devices, specializing in Apple iPhone.",
+        "Developed training programs for customers on Apple iPhone and Mac operating systems.",
+        "Provided commercial advice to customers for purchasing equipment.",
       ],
     },
     {
-      title: "Web Developer",
-      company_name: "Shopify",
-      icon: shopify,
-      iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
-      points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
-    },
-    {
-      title: "Full stack Developer",
-      company_name: "Meta",
-      icon: meta,
+      title: "Laboratory Analyst",
+      company_name: "Bromatological Laboratories Araba S.L. Bioemeriux Nutrisciences.",
+      icon: merieux,
       iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
+      iconBorder: "#2E8B57",
+      date: "September 2018 - October 2023",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
-      ],
+        "Responsible for calibrations and verifications in the laboratory. Maintenance of the ISO documentation associated with equipment.",
+        "Responsible for external calibration services.",
+        "Microbiological analysis of water and food. Plating and isolations.",
+        "Preparation of culture media and diluents."
+      ]
     },
+    {
+      title: "Full Stack Developer",
+      company_name: "Oreka IT",
+      icon: oreka,
+      iconBg: "#E6DEDD",
+      iconBorder: "#84004f",
+      date: "October 2023 - Present",
+      points: [
+        "Frontend solution development using React.js and compatible libraries.",
+        "Backend solution development using Node.js and JavaScript/TypeScript.",
+        "APEX code implementation for Salesforce integrations with PO.",
+        "Internal auditor for the company for ISO 9001, 27001, and 20000-1."
+      ]
+    }    
   ];
   
   const testimonials = [
