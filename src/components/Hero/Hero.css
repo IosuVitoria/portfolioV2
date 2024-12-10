@@ -1,0 +1,10 @@
+.correccion{
+    margin-bottom: -100px !important;
+    background-color: #83c0f5;
+    opacity: 0.8;
+    border: 2px solid white;
+}
+
+.correccionBola{
+    background-color: white !important;
+}
