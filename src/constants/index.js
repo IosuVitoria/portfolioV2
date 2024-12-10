@@ -154,7 +154,7 @@ import {
         "Frontend solution development using React.js and compatible libraries.",
         "Backend solution development using Node.js and JavaScript/TypeScript.",
         "APEX code implementation for Salesforce integrations with PO.",
-        "Internal auditor for the company for ISO 9001, 27001, and 20000-1."
+        "Internal auditor for ISO 9001, 27001, and 20000-1."
       ]
     }    
   ];

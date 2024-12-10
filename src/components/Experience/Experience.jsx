@@ -48,19 +48,6 @@ const ExperienceCard = ({ experience, index }) => {
             />
           </div>
         }
-        onMouseEnter={(e) => {
-          e.currentTarget.style.background = "#BBDEFB";
-          e.currentTarget.style.opacity = "0.7";
-          e.currentTarget.style.boxShadow =
-            "10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.8)";
-          e.currentTarget.style.borderRightColor = "#1E88E5";
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.background = "#E3F2FD";
-          e.currentTarget.style.boxShadow =
-            "5px 5px 10px rgba(0, 0, 0, 0.15), -5px -5px 10px rgba(255, 255, 255, 0.8)";
-          e.currentTarget.style.borderRightColor = "#BBDEFB";
-        }}
       >
         <div>
           <h3 className="text-[24px] font-bold" style={{ color: "#333" }}>
@@ -109,5 +96,3 @@ const Experience = () => {
 };
 
 export default SectionWrapper(Experience, "work");
-
-
