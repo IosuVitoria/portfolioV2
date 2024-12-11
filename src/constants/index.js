@@ -11,10 +11,7 @@ import {
     redux,
     tailwind,
     nodejs,
-    mongodb,
     git,
-    figma,
-    docker,
    apple,
    merieux,
    oreka,
@@ -30,6 +27,7 @@ import {
     {
       id: "about",
       title: "About",
+      // icon: 
     },
     {
       id: "work",
@@ -64,56 +62,60 @@ import {
     {
       name: "HTML 5",
       icon: html,
+      brandColor: "#E34F26", // Rojo de HTML5
     },
     {
       name: "CSS 3",
       icon: css,
+      brandColor: "#1572B6",
     },
     {
       name: "JavaScript",
       icon: javascript,
+      brandColor: "#F7DF1E", 
     },
     {
       name: "TypeScript",
       icon: typescript,
+      brandColor: "#3178C6", 
     },
     {
       name: "React JS",
       icon: reactjs,
+      brandColor: "#61DAFB", 
     },
     {
-      name: "Redux Toolkit",
+      name: "Redux",
       icon: redux,
+      brandColor: "#764ABC", 
     },
     {
       name: "Tailwind CSS",
       icon: tailwind,
+      brandColor: "#06B6D4", 
     },
     {
       name: "Node JS",
       icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
+      brandColor: "#339933", 
     },
     {
       name: "Three JS",
       icon: threejs,
+      brandColor: "#000000", 
     },
     {
-      name: "git",
+      name: "Git",
       icon: git,
+      brandColor: "#F05032", 
     },
     {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
+      name: "Salesforce",
+      icon: mobile,
+      brandColor: "#00A1E0", 
     },
   ];
+  
   
   const experiences = [
     {

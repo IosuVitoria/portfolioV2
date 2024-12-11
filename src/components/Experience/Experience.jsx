@@ -78,9 +78,9 @@ const Experience = () => {
   return (
     <>
       {/* Cabecera animada */}
-      <motion.div variants={textVariant}>
+      <motion.div variants={textVariant} >
         <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience</h2>
+        <h2 className={styles.sectionHeadText} style={{marginBottom:"35px", borderBottom: "1px solid white"}}>Work Experience</h2>
       </motion.div>
 
       {/* Línea del tiempo */}
