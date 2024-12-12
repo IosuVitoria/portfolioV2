@@ -6,12 +6,13 @@ import { SectionWrapper } from "../../hoc";
 import { projects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { github } from "../../assets";
-import { Replay, ResetTv } from "@mui/icons-material";
+import { Replay } from "@mui/icons-material";
+import './Works.css';
 
-// Component for rendering individual project cards
+
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.35)}>
       <Tilt
         options={{
           max: 45,
@@ -39,10 +40,14 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </div>
         <div className="mt-5">
           <h3 className="text-lg font-bold text-white">{name}</h3>
-          <p className="text-sm text-secondary mt-2">{description}</p>
-          <div className="flex flex-wrap gap-2 mt-3">
+          <p className="text-sm text-secondary mt-2 textProject-hover">{description}</p>
+          <div className="flex flex-wrap gap-2 mt-3 justify-evenly mt-5">
             {tags.map((tag, idx) => (
-              <span key={idx} className={`text-xs ${tag.color} px-2 py-1 rounded`}>
+              <span
+                key={idx}
+                className={`text-xs text-white px-2 py-1 rounded border`}
+                style={{ background: `var(--${tag.color})` }} // Utiliza una variable CSS dinámica
+              >
                 #{tag.name}
               </span>
             ))}
@@ -116,7 +121,7 @@ const Works = () => {
       <div className="flex justify-center w-[100%]">
         <button
           onClick={handleReset}
-          className="mt-4 p-2 rounded-md bg-tertiary text-white w-full sm:w-[20%] self-center flex justify-evenly border border-gray-500 "
+          className="mt-4 p-2 rounded-md bg-tertiary text-white w-full sm:w-[20%] self-center flex justify-evenly border border-gray-500 buttonReset-hover"
         >
           <Replay />
           Reset
