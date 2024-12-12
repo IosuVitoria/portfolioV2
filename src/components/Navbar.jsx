@@ -31,21 +31,21 @@ const Navbar = () => {
           <img src={logo} alt="logo" className='w-11 h-11 object-contain mr-2' />
           <p className='text-white text-[18px] font-bold cursor-pointer'>IosuDev &nbsp; <span className='sm:block hidden'> | Full Stack Developer</span> </p>
         </Link>
-          <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li key={link.id} 
-                className={`${active === link.title
-                  ? "text-white"
-                  : "text-secondary"
-                } hover:text-white text-[18px]
-                font-medium cursor-pointer`}
-                onClick={() => {setActive(link.title)}}
+            <ul className="list-none hidden sm:flex flex-row gap-10">
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`nav-item ${
+                    active === link.title ? "nav-item-active text-white" : "text-secondary"
+                  } text-[18px] font-medium cursor-pointer`}
+                  onClick={() => {
+                    setActive(link.title);
+                  }}
                 >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-          </ul>
-
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              ))}
+            </ul>
           <div className='sm:hidden flex flex-1 justify-end items-center'>
               <img src={toogle ? close : menu} 
                    alt="menu" 
