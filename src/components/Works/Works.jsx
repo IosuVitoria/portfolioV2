@@ -2,49 +2,101 @@ import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { styles } from "../../styles";
-import { GitHub } from "@mui/icons-material";
 import { SectionWrapper } from "../../hoc";
 import { projects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
+import { github } from "../../assets";
+import { Replay, ResetTv } from "@mui/icons-material";
 
-const ProjectCard = ({}) => {
-  return(
-    <div>Proyecto</div>
-  )
-}
+// Component for rendering individual project cards
+const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+  return (
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      <Tilt
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer"
+
+        whileHover
+      >
+        <div className="relative w-full h-[230px]">
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover rounded-2xl cursor-pointer"
+          />
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            >
+              <img src={github} alt="github" className="w-1/2 h-1/2 object-contain" />
+            </div>
+          </div>
+        </div>
+        <div className="mt-5">
+          <h3 className="text-lg font-bold text-white">{name}</h3>
+          <p className="text-sm text-secondary mt-2">{description}</p>
+          <div className="flex flex-wrap gap-2 mt-3">
+            {tags.map((tag, idx) => (
+              <span key={idx} className={`text-xs ${tag.color} px-2 py-1 rounded`}>
+                #{tag.name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </Tilt>
+    </motion.div>
+  );
+};
+
 
 const Works = () => {
   const [searchName, setSearchName] = useState("");
   const [searchTech, setSearchTech] = useState("");
 
-  const filteredProjects = projects.filter(
-    (project) =>
-      project.name.toLowerCase().includes(searchName.toLowerCase()) &&
-      project.tags.some((tag) =>
-        tag.name.toLowerCase().includes(searchTech.toLowerCase())
+  const resetFilters = () => {
+    setSearchName("");
+    setSearchTech("");
+  };
+
+  window.onload = () => {
+    resetFilters();
+  };
+
+  const handleReset = () => {
+    resetFilters();
+    window.location.hash = "#projects"; 
+    window.location.reload(); 
+  };
+
+  let filteredProjects = searchName || searchTech
+    ? projects.filter(
+        (project) =>
+          project.name.toLowerCase().includes(searchName.toLowerCase()) &&
+          project.tags.some((tag) => tag.name.toLowerCase().includes(searchTech.toLowerCase()))
       )
-  );
+    : projects;
 
   return (
     <>
       <motion.div
-        variants={{
-          hidden: { opacity: 0 },
-          visible: { opacity: 1, transition: { delay: 0.1 } },
-        }}
+        variants={textVariant}
         initial="hidden"
         animate="visible"
       >
-        <p className={styles.sectionSubText}>My work</p>
+        <p className={styles.sectionSubText}>My Work</p>
         <h2
-          className={`${styles.sectionHeadText}`}
-          style={{ marginBottom: "35px", borderBottom: "1px solid white" }}
+          className={`${styles.sectionHeadText} border-b border-white pb-2 mb-8`}
         >
-          Some projects.
+          Projects Showcase
         </h2>
       </motion.div>
 
-      <div className="w-full flex flex-col gap-4 mt-5">
+      <div className="w-full flex flex-col sm:flex-row gap-4 mt-5 mb-5">
         <input
           type="text"
           placeholder="Search by name..."
@@ -61,15 +113,22 @@ const Works = () => {
         />
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
-        {filteredProjects.map((project, index) => (
-          <ProjectCard
-            key={`project-${index}`}
-            index={index}
-            {...project}
-          />
-        ))}
-        {filteredProjects.length === 0 && (
+      <div className="flex justify-center w-[100%]">
+        <button
+          onClick={handleReset}
+          className="mt-4 p-2 rounded-md bg-tertiary text-white w-full sm:w-[20%] self-center flex justify-evenly border border-gray-500 "
+        >
+          <Replay />
+          Reset
+        </button>
+      </div>
+
+      <div className="mt-10 flex flex-wrap gap-7">
+        {filteredProjects.length > 0 ? (
+          filteredProjects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))
+        ) : (
           <p className="text-white">No projects match your search criteria.</p>
         )}
       </div>
@@ -77,4 +136,4 @@ const Works = () => {
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");
