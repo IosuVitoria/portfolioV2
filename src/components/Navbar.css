@@ -1,10 +1,10 @@
 .nav-item {
     position: relative;
     transition: color 0.3s ease, border-color 0.3s ease;
-  }
+}
   
-  .nav-item:hover::after,
-  .nav-item-active::after {
+.nav-item:hover::after,
+.nav-item-active::after {
     content: "";
     position: absolute;
     left: 0;
@@ -15,11 +15,27 @@
     border-radius: 2px;
 }
   
-  .nav-item:hover {
-    color: #ffffff; /* Hover text color */
-  }
-  
-  .nav-item-active {
+.nav-item:hover {
     color: #ffffff; 
-  }
+}
+  
+.nav-item-active {
+    color: #ffffff; 
+}
+  
+
+@media (max-width: 500px) {
+    .language-selector {
+      display: none;
+    }
+}
+  
+ 
+@media (min-width: 500px) {
+    .language-selector {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+}
   

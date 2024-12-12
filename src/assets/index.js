@@ -20,7 +20,8 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
-
+import esp from "./esp.png";
+import eng from "./eng.png";
 import apple from "./company/apple.png";
 import merieux from "./company/meriux.png";
 import oreka from "./company/oreka.png";
@@ -58,4 +59,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  esp,
+  eng
 };
