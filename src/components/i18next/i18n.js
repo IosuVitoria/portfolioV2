@@ -1,16 +1,16 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-const savedLanguage = localStorage.getItem('language') || 'en'; 
+const savedLanguage = localStorage.getItem('language') || 'en';
 
 i18n
-  .use(initReactI18next) 
+  .use(initReactI18next)
   .init({
-    lng: savedLanguage, 
-    fallbackLng: 'es', 
+    lng: savedLanguage,
+    fallbackLng: 'es',
     debug: true,
     interpolation: {
-      escapeValue: false, 
+      escapeValue: false,
     },
     resources: {
       en: {
@@ -40,6 +40,11 @@ i18n
             threejs: "Three JS",
             git: "Git",
             salesforce: "Salesforce"
+          },
+          // Añadir las traducciones para el Hero
+          hero: {
+            title: "Hi, I am",
+            subtitle: "My primary role is web development, but I also have experience in Salesforce development."
           }
         },
       },
@@ -70,6 +75,11 @@ i18n
             threejs: "Three JS",
             git: "Git",
             salesforce: "Salesforce"
+          },
+          // Traducción para el Hero
+          hero: {
+            title: "Hola, soy",
+            subtitle: "Mi rol principal es el desarrollo web, pero también tengo experiencia en desarrollo de Salesforce."
           }
         },
       },
@@ -77,3 +87,4 @@ i18n
   });
 
 export default i18n;
+

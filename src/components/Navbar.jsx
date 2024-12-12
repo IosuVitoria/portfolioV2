@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next'; // Importar el hook de i18next
+import { useTranslation } from 'react-i18next';
 import { styles } from '../styles';
 import { logo, menu, close } from '../assets';
-import { esp, eng } from '../assets';  
+import { esp, eng } from '../assets';
 import './Navbar.css';
 
-// Importaciones explícitas para cada idioma
-import { navLinks } from '../constants/index'; 
-import { navLinksES } from '../constants/indexES'; 
+
+import { navLinks } from '../constants/index';
+import { navLinksES } from '../constants/indexES';
 import { RecordVoiceOverOutlined } from '@mui/icons-material';
 
 const Navbar = () => {
-  const { i18n } = useTranslation(); 
+  const { i18n } = useTranslation();
   const [active, setActive] = useState("");
   const [toogle, setToogle] = useState(false);
   const [currentNavLinks, setCurrentNavLinks] = useState(navLinks);
@@ -24,7 +24,7 @@ const Navbar = () => {
     } else {
       setCurrentNavLinks(navLinks);
     }
-    i18n.changeLanguage(lng); 
+    i18n.changeLanguage(lng);
     localStorage.setItem('language', lng);
     setLanguageMenuVisible(false); 
   };
@@ -65,8 +65,7 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Botón de selección de idioma con banderas */}
-        <div className="absolute sm:right-5 right-3 top-5 sm:top-5 language-selector">
+         <div className="absolute sm:right-5 right-3 top-5 sm:top-5 language-selector">
             <button
               className="w-10 h-10 rounded-full bg-primary p-2 border bg-tertiary flex justify-center items-center"
               onClick={() => setLanguageMenuVisible(!languageMenuVisible)}
@@ -108,7 +107,7 @@ const Navbar = () => {
 
           <div
             className={`${
-              !toogle ? 'hidden' : 'flex'
+              !toogle ? "hidden" : "flex"
             } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
@@ -116,7 +115,7 @@ const Navbar = () => {
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? 'text-white' : 'text-secondary'
+                    active === link.title ? "text-white" : "text-secondary"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setToogle(!toogle);
@@ -126,6 +125,35 @@ const Navbar = () => {
                   <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
+
+              <div className="flex flex-col gap-2 mt-5 border bg-tertiary rounded-2xl w-[110%]">
+                <RecordVoiceOverOutlined className="flex m-auto" />
+                <div className="flex items-center justify-center relative  p-2 rounded-full mb-3 ">
+                  <button
+                    className="flex items-center gap-2"
+                    onClick={() => changeLanguage("es")}
+                  >
+                    <img
+                      src={esp}
+                      alt="Español"
+                      className="w-8 h-8 object-cover rounded-full"
+                    />
+                  </button>
+                </div>
+                <div className="flex items-center justify-center relative  p-2 rounded-full">
+                  
+                  <button
+                    className="flex items-center gap-2"
+                    onClick={() => changeLanguage("en")}
+                  >
+                    <img
+                      src={eng}
+                      alt="English"
+                      className="w-8 h-8 object-cover rounded-full"
+                    />
+                  </button>
+                </div>
+              </div>
             </ul>
           </div>
         </div>
