@@ -25,7 +25,7 @@ import eng from "./eng.png";
 import apple from "./company/apple.png";
 import merieux from "./company/meriux.png";
 import oreka from "./company/oreka.png";
-
+import resumebg from "./resumebg.webp"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -60,5 +60,6 @@ export {
   jobit,
   tripguide,
   esp,
-  eng
+  eng,
+  resumebg
 };
