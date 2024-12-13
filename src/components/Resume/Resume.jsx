@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next';
 import { DownloadOutlined } from '@mui/icons-material';
 import resumebg from '../../assets/resumebg.webp'; 
 import { styles } from '../../styles';
+import cvEs from './assets/cv-es.pdf';
+import cvEn from './assets/cv-en.pdf';
 
 const tiltOptions = {
   max: 25,
@@ -45,8 +47,8 @@ const Resume = () => {
 
         <div className="flex flex-col md:flex-row gap-4 mt-6 w-full justify-center">
           <motion.a
-            href="./assets/cv-es.pdf" 
-            download
+            href={cvEs}
+            download="cv-es.pdf"
             variants={fadeIn("up", "spring", 1, 1.5)}
             className="px-6 py-3 bg-tertiary text-white rounded-lg border shadow-lg hover:bg-blue-700 transition-all w-full xl:w-[220px] sm:w-auto flex items-center justify-evenly"
           >
@@ -55,8 +57,8 @@ const Resume = () => {
           </motion.a>
 
           <motion.a
-            href="./assets/cv-en.pdf" 
-            download
+            href={cvEn} 
+            download = "cv-en.pdf"
             variants={fadeIn("up", "spring", 1.2, 1.5)}
             className="px-6 py-3 bg-tertiary text-white rounded-lg border shadow-lg hover:bg-blue-700 transition-all w-full xl:w-[220px] sm:w-auto flex items-center justify-evenly"
           >
