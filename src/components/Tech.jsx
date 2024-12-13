@@ -4,14 +4,17 @@ import { technologies } from "../constants";
 import { motion } from 'framer-motion';
 import { styles } from "../styles";
 import { textVariant } from "../utils/motion";
+import { useTranslation } from "react-i18next";
 
 const Tech = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant}>
-        <p className={styles.sectionSubText}>More about me</p>
+        <p className={styles.sectionSubText}>{t("MoreAboutMe")}</p>
         <h2 className={styles.sectionHeadText} style={{ marginBottom: "35px", borderBottom: "1px solid white" }}>
-          My Technology Stack
+          {t("MyTechnologyStack")}
         </h2>
       </motion.div>
       <div className="flex flex-row flex-wrap justify-center gap-10">
