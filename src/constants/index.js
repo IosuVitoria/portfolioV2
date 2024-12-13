@@ -122,7 +122,7 @@ import {
   ];
   
   
-  const experiences = [
+  const experiencesEN = [
     {
       title: "Apple Repair Technician",
       company_name: "Iraxkorr S.L.",
@@ -259,4 +259,4 @@ import {
     },
   ];
   
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiencesEN, testimonials, projects };

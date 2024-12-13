@@ -122,14 +122,14 @@ const technologies = [
 ];
 
 // Experiencias
-const experiences = [
+const experiencesES = [
     {
-        title: "Técnico de Reparación Apple", // Título traducido
+        title: "Técnico de Reparación Apple", 
         company_name: "Iraxkorr S.L.",
         icon: apple,
         iconBg: "#E6DEDD",
         iconBorder: "#535353",
-        date: "Agosto 2016 - Agosto 2018", // Fechas traducidas
+        date: "Agosto 2016 - Agosto 2018", 
         points: [
             "Técnico certificado por Apple para dispositivos iOS, especializado en Apple iPhone.",
             "Desarrollé programas de capacitación para clientes sobre los sistemas operativos Apple iPhone y Mac.",
@@ -137,12 +137,12 @@ const experiences = [
         ],
     },
     {
-        title: "Analista de Laboratorio", // Título traducido
+        title: "Analista de Laboratorio", 
         company_name: "Laboratorios Bromatológicos Araba S.L. Bioemeriux Nutrisciences.",
         icon: merieux,
         iconBg: "#E6DEDD",
         iconBorder: "#2E8B57",
-        date: "Septiembre 2018 - Octubre 2023", // Fechas traducidas
+        date: "Septiembre 2018 - Octubre 2023",
         points: [
             "Responsable de calibraciones y verificaciones en el laboratorio. Mantenimiento de la documentación ISO asociada a equipos.",
             "Responsable de los servicios de calibración externos.",
@@ -151,12 +151,12 @@ const experiences = [
         ]
     },
     {
-        title: "Desarrollador Full Stack", // Título traducido
+        title: "Desarrollador Full Stack", 
         company_name: "Oreka IT",
         icon: oreka,
         iconBg: "#E6DEDD",
         iconBorder: "#84004f",
-        date: "Octubre 2023 - Presente", // Fechas traducidas
+        date: "Octubre 2023 - Presente", 
         points: [
             "Desarrollo de soluciones frontend utilizando React.js y bibliotecas compatibles.",
             "Desarrollo de soluciones backend utilizando Node.js y JavaScript/TypeScript.",
@@ -261,4 +261,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiencesES, testimonials, projects };

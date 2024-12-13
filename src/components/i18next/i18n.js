@@ -53,6 +53,10 @@ i18n
           downloadCVEnglish: "Resume",
           downloadCVSpanish: "Curriculum Vitae",
           Information: "Information",
+          MoreAboutMe: "More About Me",
+          MyTechnologyStack: "My Technology Stack",
+          previo: "What I have done so far",
+          WorkExperience: "Work Experience"
         },
       },
       es: {
@@ -93,6 +97,11 @@ i18n
           downloadCVSpanish: "Curriculum Vitae",
           Information:"Información",
           downloadCVEnglish: "Resume",
+          MoreAboutMe: "Más sobre mi...",
+          MyTechnologyStack: "Stack tecnológico",
+          previo: "El camino hasta ahora...",
+          WorkExperience: "Experiencias laborales"
+
         },
       },
     },

@@ -8,6 +8,7 @@ import { fadeIn, textVariant } from "../../utils/motion";
 import { github } from "../../assets";
 import { Replay } from "@mui/icons-material";
 import './Works.css';
+import { useTranslation } from "react-i18next";
 
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
@@ -46,7 +47,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
               <span
                 key={idx}
                 className={`text-xs text-white px-2 py-1 rounded border`}
-                style={{ background: `var(--${tag.color})` }} // Utiliza una variable CSS dinámica
+                style={{ background: `var(--${tag.color})` }} 
               >
                 #{tag.name}
               </span>
@@ -62,6 +63,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 const Works = () => {
   const [searchName, setSearchName] = useState("");
   const [searchTech, setSearchTech] = useState("");
+  const { t } = useTranslation();
 
   const resetFilters = () => {
     setSearchName("");

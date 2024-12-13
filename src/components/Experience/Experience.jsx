@@ -3,11 +3,13 @@ import { motion } from 'framer-motion';
 import 'react-vertical-timeline-component/style.min.css';
 import './Experience.css';
 import { styles } from '../../styles';
-import { experiences } from '../../constants';
+import { experiencesEN } from '../../constants';
+import { experiencesES } from '../../constants/indexES';
 import { SectionWrapper } from '../../hoc';
 import { textVariant, fadeIn } from '../../utils/motion';
+import { useTranslation } from 'react-i18next';
+import { useState, useEffect } from 'react';
 
-// Componente de tarjeta de experiencia con estilo azulado y efecto 3D
 const ExperienceCard = ({ experience, index }) => {
   const isLeft = index % 2 === 0;
 
@@ -73,17 +75,34 @@ const ExperienceCard = ({ experience, index }) => {
   );
 };
 
-// Componente principal con estilo ajustado
 const Experience = () => {
+  const { t, i18n } = useTranslation();
+  const [experiences, setExperiences] = useState(experiencesEN);
+
+  useEffect(() => {
+    const userLanguage = localStorage.getItem("language");
+
+    if (userLanguage.startsWith("es")) {
+      setExperiences(experiencesES); 
+      i18n.changeLanguage('es'); 
+    } else {
+      setExperiences(experiencesEN);
+      i18n.changeLanguage('en'); 
+    }
+
+    localStorage.setItem('language', i18n.language);
+
+  }, [i18n.language]); 
+
   return (
     <>
-      {/* Cabecera animada */}
-      <motion.div variants={textVariant} >
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText} style={{marginBottom:"35px", borderBottom: "1px solid white"}}>Work Experience</h2>
+      <motion.div variants={textVariant}>
+        <p className={styles.sectionSubText}>{t("previo")}</p>
+        <h2 className={styles.sectionHeadText} style={{ marginBottom: "35px", borderBottom: "1px solid white" }}>
+          {t("WorkExperience")}
+        </h2>
       </motion.div>
 
-      {/* Línea del tiempo */}
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (

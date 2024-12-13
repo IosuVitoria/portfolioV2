@@ -5,7 +5,7 @@ import { ComputersCanvas } from "../canvas/Computers";
 import { useTranslation } from "react-i18next";
 
 const Hero = () => {
-  const { t } = useTranslation(); // Usamos el hook de i18n
+  const { t } = useTranslation(); 
 
   return (
     <section className="relative w-full h-screen mx-auto">

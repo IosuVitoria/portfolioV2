@@ -5,7 +5,7 @@ import { styles } from '../../styles';
 import { services } from '../../constants';
 import { fadeIn, textVariant } from '../../utils/motion';
 import { SectionWrapper } from '../../hoc';
-import { useTranslation } from 'react-i18next';  // Importar el hook de i18next
+import { useTranslation } from 'react-i18next';  
 import './About.css';
 
 const ServiceCard = ({index, title, icon}) => {
@@ -32,14 +32,14 @@ const ServiceCard = ({index, title, icon}) => {
 };
 
 const About = () => {
-  const { t } = useTranslation(); // Usar el hook para obtener las traducciones
+  const { t } = useTranslation();
 
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>{t('introduction')}</p> {/* Traducción del texto */}
+        <p className={styles.sectionSubText}>{t('introduction')}</p> 
         <h2 className={styles.sectionHeadText} style={{ marginBottom: "35px", borderBottom: "1px solid white" }}>
-          {t('overview')} {/* Traducción del texto */}
+          {t('overview')} 
         </h2>
       </motion.div>
 
@@ -47,7 +47,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-6xl leading-[30px]"
       >
-        {t('aboutText')} {/* Traducción del texto largo */}
+        {t('aboutText')}
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
