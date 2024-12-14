@@ -1,0 +1,9 @@
+.footer-button{
+    width: 45px !important;               
+    height: 45px !important;
+    padding: 5px !important;
+}
+
+.footer-button:hover{
+    color: white;
+}

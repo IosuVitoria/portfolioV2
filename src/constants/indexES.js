@@ -26,26 +26,26 @@ import {
 export const navLinksES = [
     {
         id: "about",
-        title: "Acerca de", // Título traducido
+        title: "Acerca de", 
     },
     {
         id: "work",
-        title: "Trabajo", // Título traducido
+        title: "Trabajo", 
     },
     {
         id: "projects",
-        title: "Proyectos", // Título traducido
+        title: "Proyectos",
     },
     {
         id: "contact",
-        title: "Contacto", // Título traducido
+        title: "Contacto", 
     }
 ];
 
 // Servicios ofrecidos
 const services = [
     {
-        title: "Desarrollador Full Stack", // Título traducido
+        title: "Desarrollador Full Stack", 
         icon: web,
     },
     {
@@ -166,38 +166,11 @@ const experiencesES = [
     }    
 ];
 
-// Testimonios
-const testimonials = [
-    {
-        testimonial:
-            "Pensé que era imposible hacer un sitio web tan bonito como nuestro producto, pero Rick me demostró lo contrario.", // Testimonio traducido
-        name: "Sara Lee",
-        designation: "CFO",
-        company: "Acme Co",
-        image: "https://randomuser.me/api/portraits/women/4.jpg",
-    },
-    {
-        testimonial:
-            "Nunca he conocido a un desarrollador web que realmente se preocupe por el éxito de sus clientes como lo hace Rick.", // Testimonio traducido
-        name: "Chris Brown",
-        designation: "COO",
-        company: "DEF Corp",
-        image: "https://randomuser.me/api/portraits/men/5.jpg",
-    },
-    {
-        testimonial:
-            "Después de que Rick optimizara nuestro sitio web, nuestro tráfico aumentó un 50%. ¡No podemos agradecérselo lo suficiente!", // Testimonio traducido
-        name: "Lisa Wang",
-        designation: "CTO",
-        company: "456 Enterprises",
-        image: "https://randomuser.me/api/portraits/women/6.jpg",
-    },
-];
 
 // Proyectos
 const projects = [
     {
-        name: "Alquiler de Autos", // Nombre del proyecto traducido
+        name: "Alquiler de Autos", 
         description:
             "Plataforma web que permite a los usuarios buscar, reservar y gestionar alquileres de autos de diferentes proveedores, proporcionando una solución conveniente y eficiente para las necesidades de transporte.", // Descripción traducida
         tags: [
@@ -261,4 +234,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiencesES, testimonials, projects };
+export { services, technologies, experiencesES, projects };

@@ -21,7 +21,7 @@ const Resume = () => {
   return (
     <section
       className="flex flex-col md:flex-row items-center justify-center min-h-screen py-10 px-5 bg-cover bg-center mt-10"
-      style={{ backgroundImage: `url(${resumebg})`, backgroundSize: "cover", backgroundPosition:"center", backgroundRepeat: "no-repeat" }} // Imagen de fondo
+      style={{ backgroundImage: `url(${resumebg})`, backgroundSize: "cover", backgroundPosition:"center", backgroundRepeat: "no-repeat" }} 
     >
       <div className="flex flex-col items-center md:items-center md:w-3/4 lg:w-1/2">
         <motion.h2 className={`${styles.heroHeadText} sm:text-[9px]`} style={{position: "relative", top: "-35px", borderBottom: "1px solid white"}}>
