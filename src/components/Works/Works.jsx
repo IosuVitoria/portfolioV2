@@ -5,14 +5,13 @@ import { styles } from "../../styles";
 import { SectionWrapper } from "../../hoc";
 import { projects } from "../../constants";
 import { fadeIn, textVariant } from "../../utils/motion";
-import { github } from "../../assets";
+import { github, vercel } from "../../assets";
 import { Replay } from "@mui/icons-material";
 import './Works.css';
 import { useTranslation } from "react-i18next";
 
 
-
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, vercel_link, year}) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.35)}>
       <Tilt
@@ -31,17 +30,24 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             alt={name}
             className="w-full h-full object-cover rounded-2xl cursor-pointer"
           />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute inset-0 flex gap-3 justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
               <img src={github} alt="github" className="w-1/2 h-1/2 object-contain" />
             </div>
+            <div
+              onClick={() => window.open(vercel_link, "_blank")}
+              className="blues-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+            >
+              <img src={vercel} alt="vercel" className="w-1/2 h-1/2 object-contain" />
+            </div>
           </div>
         </div>
         <div className="mt-5">
           <h3 className="text-lg font-bold text-white">{name}</h3>
+          <h5 className="text-lg font-bold text-white">{year}</h5>
           <p className="text-sm text-secondary mt-2 textProject-hover">{description}</p>
           <div className="flex flex-wrap gap-2 mt-3 justify-evenly mt-5">
             {tags.map((tag, idx) => (

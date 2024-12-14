@@ -188,7 +188,7 @@ import {
         ],
         image: proyecto1,
         year: 2023,
-        vercel: "https://prueba-tecnicas-arc6l0x6g-iosuvitoria.vercel.app/",
+        vercel_link: "https://prueba-tecnicas-arc6l0x6g-iosuvitoria.vercel.app/",
         source_code_link: "https://github.com/IosuVitoria/PruebaTecnicas/tree/master/Iosu/Prueba12",
     },
     {
@@ -211,7 +211,7 @@ import {
         ],
         image: proyecto2,
         year: 2023,
-        vercel: "https://paleta-de-colores-psi.vercel.app/",
+        vercel_link: "https://paleta-de-colores-psi.vercel.app/",
         source_code_link: "https://github.com/IosuVitoria/potential-meme/tree/master/Day19",
     },
     {
@@ -230,7 +230,7 @@ import {
         ],
         image: proyecto3,
         year: 2023,
-        vercel: "https://pokedex-wine-ten.vercel.app/",
+        vercel_link: "https://pokedex-wine-ten.vercel.app/",
         source_code_link: "https://github.com/IosuVitoria/portfolioprojects/tree/master/proyecto3",
     },
 ];

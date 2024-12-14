@@ -26,10 +26,7 @@ import apple from "./company/apple.png";
 import merieux from "./company/meriux.png";
 import oreka from "./company/oreka.png";
 import resumebg from "./resumebg.webp"
-
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import vercel from "./vercel.svg";
 
 import proyecto1 from "./proyecto1.png";
 import proyecto2 from "./proyecto2.png";
@@ -60,9 +57,7 @@ export {
   apple,
   oreka,
   merieux,
-  carrent,
-  jobit,
-  tripguide,
+  vercel,
   esp,
   eng,
   resumebg,
