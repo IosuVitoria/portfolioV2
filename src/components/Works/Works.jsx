@@ -11,6 +11,7 @@ import './Works.css';
 import { useTranslation } from "react-i18next";
 
 
+
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.35)}>
@@ -95,25 +96,25 @@ const Works = () => {
         initial="hidden"
         animate="visible"
       >
-        <p className={styles.sectionSubText}>My Work</p>
+        <p className={styles.sectionSubText}>{t("MyWork")}</p>
         <h2
           className={`${styles.sectionHeadText} border-b border-white pb-2 mb-8`}
         >
-          Projects Showcase
+          {t("ProjectsShowcase")}
         </h2>
       </motion.div>
 
       <div className="w-full flex flex-col sm:flex-row gap-4 mt-5 mb-5">
         <input
           type="text"
-          placeholder="Search by name..."
+          placeholder={t("Searchbyname")}
           value={searchName}
           onChange={(e) => setSearchName(e.target.value)}
           className="p-2 rounded-md border border-gray-500 w-full sm:w-[48%]"
         />
         <input
           type="text"
-          placeholder="Search by technology..."
+          placeholder={t("Searchbytechnology")}
           value={searchTech}
           onChange={(e) => setSearchTech(e.target.value)}
           className="p-2 rounded-md border border-gray-500 w-full sm:w-[48%]"

@@ -12,12 +12,12 @@ import {
     tailwind,
     nodejs,
     git,
-   apple,
-   merieux,
-   oreka,
-    carrent,
-    jobit,
-    tripguide,
+    apple,
+    merieux,
+    oreka,
+    proyecto1,
+    proyecto2,
+    proyecto3,
     threejs
   } from "../assets";
 
@@ -169,68 +169,71 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
-      description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
+        name: "Bioinformatics Tools", 
+        description:
+            "When I started working with programming, I decided to try a small blend of my original professional field and my target field. I'm proud of it, but there’s still much to do.",
+        tags: [
+            {
+                name: "html5",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "CSS3",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Javascript",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: proyecto1,
+        year: 2023,
+        vercel: "https://prueba-tecnicas-arc6l0x6g-iosuvitoria.vercel.app/",
+        source_code_link: "https://github.com/IosuVitoria/PruebaTecnicas/tree/master/Iosu/Prueba12",
     },
     {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
+        name: "Color Palette", 
+        description:
+            "When I started creating projects to practice, I wanted to try something different. This was the first project that someone told me they would use for themselves.",
+        tags: [
+            {
+                name: "html5",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "CSS3",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Javascript",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: proyecto2,
+        year: 2023,
+        vercel: "https://paleta-de-colores-psi.vercel.app/",
+        source_code_link: "https://github.com/IosuVitoria/potential-meme/tree/master/Day19",
     },
     {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
-          color: "green-text-gradient",
-        },
-        {
-          name: "css",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+        name: "Pokedex", 
+        description:
+            "Pokedex built with React.JS. Select your first Pokémon and browse data while learning with this classic full-stack developer challenge.",
+        tags: [
+            {
+                name: "React",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "CSS3",
+                color: "green-text-gradient",
+            }
+        ],
+        image: proyecto3,
+        year: 2023,
+        vercel: "https://pokedex-wine-ten.vercel.app/",
+        source_code_link: "https://github.com/IosuVitoria/portfolioprojects/tree/master/proyecto3",
     },
-  ];
+];
+
   
 export { services, technologies, experiencesEN, projects };

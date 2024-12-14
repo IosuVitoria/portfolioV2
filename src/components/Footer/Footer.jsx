@@ -18,9 +18,7 @@ const Footer = () => {
       <div className="flex space-x-4 mt-4">
         <a href="https://github.com/IosuVitoria" target="_blank" rel="noopener noreferrer">
           <GitHub 
-            className="text-white hover:text-gray-400 border border-white rounded-full footer-button hover:bg-blue-700"
-
-            />
+            className="text-white hover:text-gray-400 border border-white rounded-full footer-button hover:bg-blue-700"/>
         </a>
         <a href="https://x.com/IosuRunning" target="_blank" rel="noopener noreferrer">
           <XIcon className="text-white hover:text-gray-400 border border-white  rounded-full footer-button hover:bg-blue-700" />

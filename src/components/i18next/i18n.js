@@ -56,7 +56,11 @@ i18n
           MoreAboutMe: "More About Me",
           MyTechnologyStack: "My Technology Stack",
           previo: "What I have done so far",
-          WorkExperience: "Work Experience"
+          WorkExperience: "Work Experience",
+          MyWork: "My Work",
+          ProjectsShowcase:"Projects Showcase",
+          Searchbyname : "Search by name...",
+          Searchbytechnology:"Search by technology..."
         },
       },
       es: {
@@ -100,8 +104,11 @@ i18n
           MoreAboutMe: "Más sobre mi...",
           MyTechnologyStack: "Stack tecnológico",
           previo: "El camino hasta ahora...",
-          WorkExperience: "Experiencias laborales"
-
+          WorkExperience: "Experiencias laborales",
+          MyWork: "Mi trabajo:",
+          ProjectsShowcase:"Algunos de mis proyectos",
+          Searchbyname : "Buscar por nombre...",
+          Searchbytechnology:"Buscar por tecnología..."
         },
       },
     },

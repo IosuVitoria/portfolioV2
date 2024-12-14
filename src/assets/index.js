@@ -31,6 +31,10 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import proyecto1 from "./proyecto1.png";
+import proyecto2 from "./proyecto2.png";
+import proyecto3 from "./proyecto3.png";
+
 export {
   logo,
   backend,
@@ -61,5 +65,8 @@ export {
   tripguide,
   esp,
   eng,
-  resumebg
+  resumebg,
+  proyecto1,
+  proyecto2,
+  proyecto3
 };

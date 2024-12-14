@@ -15,14 +15,13 @@ import {
     apple,
     merieux,
     oreka,
-    carrent,
-    jobit,
-    tripguide,
+    proyecto1,
+    proyecto2,
+    proyecto3,
     threejs
-  } from "../assets";
+} from "../assets";
   
 
-// Enlaces de navegación
 export const navLinksES = [
     {
         id: "about",
@@ -42,27 +41,26 @@ export const navLinksES = [
     }
 ];
 
-// Servicios ofrecidos
 const services = [
     {
         title: "Desarrollador Full Stack", 
         icon: web,
     },
     {
-        title: "Desarrollador Salesforce", // Título traducido
+        title: "Desarrollador Salesforce", 
         icon: mobile,
     },
     {
-        title: "Auditor ISO", // Título traducido
+        title: "Auditor ISO", 
         icon: backend,
     },
     {
-        title: "Creador de Contenido", // Título traducido
+        title: "Creador de Contenido", 
         icon: creator,
     },
 ];
 
-// Tecnologías
+
 const technologies = [
     {
         name: "HTML 5",
@@ -121,7 +119,6 @@ const technologies = [
     },
 ];
 
-// Experiencias
 const experiencesES = [
     {
         title: "Técnico de Reparación Apple", 
@@ -168,70 +165,72 @@ const experiencesES = [
 
 
 // Proyectos
-const projects = [
+const projectsES = [
     {
-        name: "Alquiler de Autos", 
+        name: "Herramientas bioinformática.", 
         description:
-            "Plataforma web que permite a los usuarios buscar, reservar y gestionar alquileres de autos de diferentes proveedores, proporcionando una solución conveniente y eficiente para las necesidades de transporte.", // Descripción traducida
+            "Cuando empecé a trabajar con programación decidí a probar una pequeña mezcla de mi campo profesional de origen y mi campo destino. Estoy orgulloso pero queda mucho por hacer.",
         tags: [
             {
-                name: "react",
+                name: "html5",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "CSS3",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "Javascript",
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: proyecto1,
+        year:2023,
+        vercel: "https://prueba-tecnicas-arc6l0x6g-iosuvitoria.vercel.app/",
+        source_code_link: "https://github.com/IosuVitoria/PruebaTecnicas/tree/master/Iosu/Prueba12",
     },
     {
-        name: "Job IT", // Nombre del proyecto traducido
+        name: "Paleta de colores", 
         description:
-            "Aplicación web que permite a los usuarios buscar ofertas de trabajo, ver rangos salariales estimados para los puestos, y localizar trabajos disponibles según su ubicación actual.", // Descripción traducida
+            "Cuando empecé a hacer proyectos para ensayar quise hacer algo diferente. Este fue el primer proyecto que alguien me dijo que iba a utilizar para si mismo.",
         tags: [
             {
-                name: "react",
+                name: "html5",
                 color: "blue-text-gradient",
             },
             {
-                name: "restapi",
+                name: "CSS3",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "Javascript",
                 color: "pink-text-gradient",
             },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: proyecto2,
+        year:2023,
+        vercel: "https://paleta-de-colores-psi.vercel.app/",
+        source_code_link: "https://github.com/IosuVitoria/potential-meme/tree/master/Day19",
     },
     {
-        name: "Guía de Viajes", // Nombre del proyecto traducido
+        name: "Pokedex", 
         description:
-            "Plataforma integral de reservas de viajes que permite a los usuarios reservar vuelos, hoteles y autos de alquiler, además de ofrecer recomendaciones personalizadas para destinos populares.", // Descripción traducida
+            "Pokedex hecha en React.JS. Señalar el primer pokemon y recorrer datos mientras aprendes con este reto típico de desarrollador full stack.",
         tags: [
             {
-                name: "nextjs",
+                name: "React",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "CSS3",
                 color: "green-text-gradient",
-            },
-            {
-                name: "css",
-                color: "pink-text-gradient",
-            },
+            }
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: proyecto3,
+        year: 2023,
+        vercel: "https://pokedex-wine-ten.vercel.app/",
+        source_code_link: "https://github.com/IosuVitoria/portfolioprojects/tree/master/proyecto3",
     },
 ];
 
-export { services, technologies, experiencesES, projects };
+export { services, technologies, experiencesES, projectsES };
