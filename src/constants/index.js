@@ -167,7 +167,7 @@ import {
   ];
   
   
-  const projects = [
+  const projectsEN = [
     {
         name: "Bioinformatics Tools", 
         description:
@@ -236,4 +236,4 @@ import {
 ];
 
   
-export { services, technologies, experiencesEN, projects };
+export { services, technologies, experiencesEN, projectsEN };

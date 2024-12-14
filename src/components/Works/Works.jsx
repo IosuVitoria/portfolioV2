@@ -1,9 +1,10 @@
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { styles } from "../../styles";
 import { SectionWrapper } from "../../hoc";
-import { projects } from "../../constants";
+import { projectsEN } from "../../constants/index";
+import { projectsES } from "../../constants/indexES";
 import { fadeIn, textVariant } from "../../utils/motion";
 import { github, vercel } from "../../assets";
 import { Replay } from "@mui/icons-material";
@@ -70,7 +71,23 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 const Works = () => {
   const [searchName, setSearchName] = useState("");
   const [searchTech, setSearchTech] = useState("");
-  const { t } = useTranslation();
+  const [projects, setProjects] = useState(projectsEN);
+  const { t, i18n } = useTranslation();
+
+  useEffect(() => {
+    const userLanguage = localStorage.getItem("language");
+
+    if (userLanguage.startsWith("es")) {
+      setProjects(projectsES); 
+      i18n.changeLanguage('es'); 
+    } else {
+      setProjects(projectsEN); 
+      i18n.changeLanguage('en'); 
+    }
+
+    localStorage.setItem('language', i18n.language);
+
+  }, [i18n.language]); 
 
   const resetFilters = () => {
     setSearchName("");
