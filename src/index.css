@@ -13,6 +13,12 @@
   color-scheme: dark;
 }
 
+:root {
+  --blue-text-gradient: linear-gradient(to right, #2193b0, #6dd5ed); /* Ejemplo */
+  --green-text-gradient: linear-gradient(to right, #56ab2f, #a8e063);
+  --pink-text-gradient: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

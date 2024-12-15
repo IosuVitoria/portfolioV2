@@ -1,0 +1,17 @@
+.Experience-element-display:hover{
+    opacity: 0.9;
+}
+
+.vertical-timeline-element-date {
+    font-size: 16px; 
+    font-weight: 600; 
+    color: #555; 
+    text-align: left; 
+    margin-top: -5px; 
+}
+  
+  
+.vertical-timeline-element-date:hover {
+    color: #E3F2FD; 
+    cursor: pointer; 
+}

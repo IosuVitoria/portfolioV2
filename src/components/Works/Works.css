@@ -1,0 +1,8 @@
+.buttonReset-hover:hover{
+    background-color: rgba(76, 111, 141, 0.7) !important;
+    border: 1px solid white;
+}
+
+.textProject-hover:hover{
+    color: white !important;
+}

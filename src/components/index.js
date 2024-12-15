@@ -4,9 +4,10 @@ import Navbar from './Navbar';
 import About from './About/About';
 import Tech from './Tech';
 import Experience from './Experience/Experience';
-import Works from './Works';
-import Feedbacks from './Feedbacks';
-import Contact from './Contact';
+import Works from './Works/Works';
+import Resume from './Resume/Resume';
+import Contact from './Contact/Contact';
+import Footer from './Footer/Footer';
 
 export {
   Hero,
@@ -15,10 +16,11 @@ export {
   Tech,
   Experience,
   Works,
-  Feedbacks,
+  Resume,
   Contact,
   EarthCanvas, 
   BallCanvas, 
   ComputersCanvas, 
-  StarsCanvas
+  StarsCanvas,
+  Footer
 }

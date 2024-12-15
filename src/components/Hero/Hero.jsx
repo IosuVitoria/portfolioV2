@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import './Hero.css'
+import './Hero.css';
 import { styles } from "../../styles";
 import { ComputersCanvas } from "../canvas/Computers";
+import { useTranslation } from "react-i18next";
 
 const Hero = () => {
+  const { t } = useTranslation(); 
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -17,11 +20,10 @@ const Hero = () => {
 
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I am <span className="text-[#75a7d3]">Iosu</span>
+            {t('hero.title')} <span className="text-[#75a7d3]">Iosu</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            My primary role is web development, but <br className="sm:block hidden" /> I also
-            have experience in Salesforce development.
+            {t('hero.subtitle')}
           </p>
         </div>
       </div>

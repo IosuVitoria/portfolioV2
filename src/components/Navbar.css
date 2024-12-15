@@ -1,0 +1,41 @@
+.nav-item {
+    position: relative;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+  
+.nav-item:hover::after,
+.nav-item-active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
+}
+  
+.nav-item:hover {
+    color: #ffffff; 
+}
+  
+.nav-item-active {
+    color: #ffffff; 
+}
+  
+
+@media (max-width: 500px) {
+    .language-selector {
+      display: none;
+    }
+}
+  
+ 
+@media (min-width: 500px) {
+    .language-selector {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+}
+  
