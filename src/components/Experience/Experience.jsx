@@ -80,9 +80,9 @@ const Experience = () => {
   const [experiences, setExperiences] = useState(experiencesEN);
 
   useEffect(() => {
-    const userLanguage = localStorage.getItem("language");
+    const userLanguage = localStorage.getItem("language") || "en";
 
-    if (userLanguage.startsWith("es")) {
+    if (userLanguage === "es") {
       setExperiences(experiencesES); 
       i18n.changeLanguage('es'); 
     } else {

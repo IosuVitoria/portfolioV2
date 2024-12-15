@@ -75,9 +75,9 @@ const Works = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
-    const userLanguage = localStorage.getItem("language");
+    const userLanguage = localStorage.getItem("language") || "en";
 
-    if (userLanguage.startsWith("es")) {
+    if (userLanguage === "es") {
       setProjects(projectsES); 
       i18n.changeLanguage('es'); 
     } else {
