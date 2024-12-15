@@ -60,7 +60,18 @@ i18n
           MyWork: "My Work",
           ProjectsShowcase:"Projects Showcase",
           Searchbyname : "Search by name...",
-          Searchbytechnology:"Search by technology..."
+          Searchbytechnology:"Search by technology...",
+          Whatname: "What's your name?",
+          Whataddress: "Which's your email address?",
+          touch: "Get in touch",
+          Contact: "Contact.",
+          wanttosay: "What you want to say?",
+          YourMessage: "Your Message",
+          Youremail: "Your email",
+          YourName:"Your name",
+          Sending: "Sending",
+          Send: "Send"
+
         },
       },
       es: {
@@ -108,7 +119,18 @@ i18n
           MyWork: "Mi trabajo:",
           ProjectsShowcase:"Algunos de mis proyectos",
           Searchbyname : "Buscar por nombre...",
-          Searchbytechnology:"Buscar por tecnología..."
+          Searchbytechnology:"Buscar por tecnología...",
+          Whatname: "¿Cuál es tu nombre?",
+          Whataddress: "¿Correo electrónico?",
+          touch: "Sólo un paso para conectar...",
+          Contact: "Contacto.",
+          wanttosay: "Escribe aquí tu mensaje. ",
+          YourMessage: "Mensaje",
+          Youremail: "Tu email",
+          YourName:"Tu nombre",
+          Sending: "Enviando",
+          Send: "Enviar"
+
         },
       },
     },
