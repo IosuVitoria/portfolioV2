@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
+import EmailSentModal from "./component/EmailSentModal";
 import { styles } from "../../styles";
 import CanvasLoader from "../Loader";
 import { SectionWrapper } from "../../hoc";
@@ -53,6 +54,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [modal, setModal] = useState({ isOpen: false, isSuccess: false });
 
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
@@ -77,7 +79,7 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Iosu Gñomez Valdecantos",
+          to_name: "Iosu Gómez Valdecantos",
           from_email: form.email,
           to_email: "iosugvaldecantos@gmail.com",
           message: form.message,
@@ -87,7 +89,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          setModal({ isOpen: true, isSuccess: true }); // Mostrar modal de éxito
 
           setForm({
             name: "",
@@ -97,9 +99,8 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
+          setModal({ isOpen: true, isSuccess: false }); // Mostrar modal de error
           console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
         }
       );
   };
@@ -152,23 +153,26 @@ const Contact = () => {
             />
           </label>
 
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary flex items-center gap-3 border" 
-          >
-            {loading ? (
-              <>
-                <FaSpinner className="animate-spin" /> 
-                {t("Sending")}
-              </>
-            ) : (
-              <>
-                <FaPaperPlane /> 
-                {t("Send")}
-              </>
-            )}
-          </button>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary flex items-center gap-5 border hover:bg-blue-700" 
+            >
+              {loading ? (
+                <>
+                  <FaSpinner className="animate-spin" /> 
+                  {t("Sending")}
+                </>
+              ) : (
+                <>
+                  <FaPaperPlane /> 
+                  {t("Send")}
+                </>
+              )}
+            </button>
+          </div>
         </form>
+        
       </motion.div>
 
       <motion.div
@@ -177,6 +181,12 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+
+      <EmailSentModal
+        isOpen={modal.isOpen}
+        isSuccess={modal.isSuccess}
+        onClose={() => setModal({ ...modal, isOpen: false })}
+      />
     </div>
   );
 };

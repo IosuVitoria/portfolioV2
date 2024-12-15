@@ -70,7 +70,14 @@ i18n
           Youremail: "Your email",
           YourName:"Your name",
           Sending: "Sending",
-          Send: "Send"
+          Send: "Send",
+          "emailSent": {
+            "successTitle": "Message Sent!",
+            "successMessage": "The email was sent successfully.",
+            "errorTitle": "Service Error",
+            "errorMessage": "Something went wrong. Please try again later.",
+            "closeButton": "Close"
+          }
 
         },
       },
@@ -129,8 +136,14 @@ i18n
           Youremail: "Tu email",
           YourName:"Tu nombre",
           Sending: "Enviando",
-          Send: "Enviar"
-
+          Send: "Enviar",
+          "emailSent": {
+            "successTitle": "¡Mensaje Enviado!",
+            "successMessage": "El correo ha sido enviado con éxito.",
+            "errorTitle": "Error de Servicio",
+            "errorMessage": "Algo salió mal. Por favor, inténtelo más tarde.",
+            "closeButton": "Cerrar"
+          }
         },
       },
     },
