@@ -12,6 +12,7 @@ import { slideIn } from "../../utils/motion";
 import { useTranslation } from "react-i18next";
 import { FaPaperPlane, FaSpinner } from "react-icons/fa"
 
+
 const EarthCanvas = () => {
   const Earth = () => {
     const earth = useGLTF("/planet/scene.gltf"); 
@@ -55,6 +56,7 @@ const Contact = () => {
     message: "",
   });
   const [modal, setModal] = useState({ isOpen: false, isSuccess: false });
+  let count = 0;
 
   const [loading, setLoading] = useState(false);
   const { t } = useTranslation();
@@ -72,16 +74,14 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
+  
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "Iosu Gómez Valdecantos",
-          from_email: form.email,
-          to_email: "iosugvaldecantos@gmail.com",
+          email_id: form.email,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -89,21 +89,23 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          setModal({ isOpen: true, isSuccess: true }); // Mostrar modal de éxito
-
+          setModal({ isOpen: true, isSuccess: true }); 
+          
           setForm({
             name: "",
             email: "",
             message: "",
           });
+          count = count++;
         },
         (error) => {
           setLoading(false);
-          setModal({ isOpen: true, isSuccess: false }); // Mostrar modal de error
+          setModal({ isOpen: true, isSuccess: false });
           console.error(error);
         }
       );
   };
+  
 
   return (
     <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden ">

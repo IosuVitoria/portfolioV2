@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -7,10 +6,16 @@ import { useTranslation } from "react-i18next";
 
 const CheckModel = () => {
   return (
-    <mesh>
-      <torusKnotGeometry args={[1, 0.4, 100, 16]} />
-      <meshStandardMaterial color="green" />
-    </mesh>
+    <group>
+      <mesh rotation={[0, 0, -Math.PI / 5]} position={[0.6, -0.2, 0]}>
+        <cylinderGeometry args={[0.25, 0.25, 4.5, 40]} />
+        <meshStandardMaterial color="green" />
+      </mesh>
+      <mesh rotation={[0, 0, Math.PI / 5]} position={[-1.2, -0.9, 0.1]}>
+        <cylinderGeometry args={[0.25, 0.25, 2, 35]} />
+        <meshStandardMaterial color="green" />
+      </mesh>
+    </group>
   );
 };
 
